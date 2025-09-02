@@ -1,6 +1,8 @@
 import {StyleSheet, Text, View} from 'react-native'
 import React from 'react'
 import {Tabs} from "expo-router";
+import {ImageBackground} from "react-native";
+import { MaterialIcons } from '@expo/vector-icons'
 
 const _Layout = () => {
     return (
@@ -9,21 +11,42 @@ const _Layout = () => {
                 name="index"
                 options={{
                     title: "Home",
-                    headerShown: false
+                    // headerShown: false
+                    tabBarIcon: ({ focused }) => (
+                        <>
+                            <ImageBackground>
+                                <MaterialIcons name="home" tintColor="#72bf6a" size={25} />
+                            </ImageBackground>
+                        </>
+                    )
                 }}
             />
             <Tabs.Screen
                 name="rewards"
                 options={{
                     title: "Rewards",
-                    headerShown: false
+                    // headerShown: false
+                    tabBarIcon: ({ focused }) => (
+                        <>
+                            <ImageBackground>
+                                <MaterialIcons name="shopping-cart" tintColor="#72bf6a" size={25} />
+                            </ImageBackground>
+                        </>
+                    )
                 }}
             />
             <Tabs.Screen
                 name="profile"
                 options={{
                     title: "Profile",
-                    headerShown: false
+                    // headerShown: false
+                    tabBarIcon: ({ focused }) => (
+                        <>
+                            <ImageBackground>
+                                <MaterialIcons name="supervised-user-circle" tintColor="#72bf6a" size={25} />
+                            </ImageBackground>
+                        </>
+                    )
                 }}
             />
         </Tabs>
