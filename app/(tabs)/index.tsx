@@ -1,4 +1,5 @@
 import { Text, View } from "react-native";
+import {Link} from "expo-router";
 
 export default function Index() {
   return (
@@ -13,6 +14,7 @@ export default function Index() {
       <Text>Edit app/index.tsx to edit this screen.</Text>
           {/*the text-primary is form extend in tailwind.config.js or u can just put text-blue-500*/}
         <Text className="text-5xl text-accent font-bold">Hello world! no hi</Text>
-    </View>
+        <Link href="/rewards">Rewards</Link>
+      </View>
   );
 }
