@@ -2,7 +2,8 @@ import { Text, View } from "react-native";
 import {Link} from "expo-router";
 
 export default function Index() {
-  return (
+
+    return (
     // <View
     //   style={{
     //     flex: 1,
@@ -15,6 +16,8 @@ export default function Index() {
           {/*the text-primary is form extend in tailwind.config.js or u can just put text-blue-500*/}
         <Text className="text-5xl text-accent font-bold">Hello world! no hi</Text>
         <Link href="/rewards">Rewards</Link>
+          {/*test*/}
+        <Link href="../authentication/test">test User</Link>
       </View>
   );
 }
