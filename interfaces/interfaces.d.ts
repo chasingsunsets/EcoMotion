@@ -81,4 +81,21 @@ interface Voucher {
     title: string;
     points: number;
     picture: any;
+    description: string;
+}
+
+interface User {
+    uid: string;
+    username: string;
+    points: number;
+    password: string;
+    vouchers: any;
+}
+
+interface UserVoucher {
+    id: string;
+    vid: string;
+    expiry: string;
+    title: string;
+    picture: any;
 }

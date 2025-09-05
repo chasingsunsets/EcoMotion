@@ -3,16 +3,9 @@ import React from 'react'
 import { FlatList } from 'react-native'
 import VoucherCard from "@/components/VoucherCard";
 import { images } from "@/constants/images";
-
+import {vouchers} from '@/data/voucher';
 const Rewards = () => {
-    const vouchers = [
-        {id: '1', title: 'Ez-Link $1 Top-Up', points: 2000, picture: images.icon},
-        {id: '2', title: 'NTUC $5 Voucher', points: 5000, picture: images.highlight},
-        {id: '3', title: 'NTUC $10 Voucher', points: 7000, picture: images.highlight},
-        {id: '4', title: 'Grab $5 Voucher', points: 10000, picture: images.icon},
-        {id: '5', title: 'Grab $10 Voucher', points: 10000, picture: images.icon},
-        {id: '6', title: 'f $5 Voucher', points: 10000, picture: images.icon}
-    ];
+
 
     return (
         <View className="flex-1">
