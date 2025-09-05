@@ -1,8 +1,7 @@
-import {StyleSheet, Text, View} from 'react-native'
-import React from 'react'
-import {Tabs} from "expo-router";
-import {ImageBackground} from "react-native";
-import { MaterialIcons } from '@expo/vector-icons'
+import { MaterialIcons } from '@expo/vector-icons';
+import { Tabs } from "expo-router";
+import React from 'react';
+import { ImageBackground } from "react-native";
 
 const _Layout = () => {
     return (
