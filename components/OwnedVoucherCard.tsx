@@ -1,10 +1,9 @@
 import {Image, Text, TouchableOpacity, View} from 'react-native'
 import { Link } from "expo-router";
-import { images } from "@/constants/images";
 
-const OwnedVoucherCard = ({id, vid, expiry, title, picture} : UserVoucher) => {
+const OwnedVoucherCard = ({id, expiry, title, picture} : UserVoucher) => {
     return (
-        <Link href={`/voucher/${id}`} asChild>
+        <Link href={`/authentication/owned_vouchers/${id}`} asChild>
              <TouchableOpacity className={"w-full"}>
                 <Image source={picture}
                        className="w-full h-40 rounded-lg"

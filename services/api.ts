@@ -1,6 +1,7 @@
 // export const VoucherDetails = async ({query}: { query: string}) => {}
 import {vouchers} from '@/data/voucher'
 import {users} from '@/data/user'
+import {useState} from "react";
 
 export const fetchVoucherDetails = async (voucherId: string): Promise<Voucher> => {
     try {
@@ -27,3 +28,16 @@ export const fetchUserDetails = async (userId: string): Promise<User> => {
         throw error;
     }
 }
+
+export const useRandomCode = () => {
+    const [code, setCode] = useState('');
+
+    const generateCode = () => {
+        const timestamp = Date.now();
+        const random = Math.floor(Math.random() * 1000);
+        const newCode = `UPS-${timestamp.toString(36)}-${random.toString(36)}`;
+        setCode(newCode.toUpperCase());
+    };
+
+    return { code, generateCode };
+};

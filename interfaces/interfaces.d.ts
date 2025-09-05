@@ -85,7 +85,8 @@ interface Voucher {
 }
 
 interface User {
-    uid: string;
+    id: string;
+    // uid: string; ???uncomment if error
     username: string;
     points: number;
     password: string;

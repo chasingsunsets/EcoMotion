@@ -14,9 +14,6 @@ const User: React.FC<Props> = ({id}) => {
     const { data: user, loading } = useFetch(fetchUser);
 
     const ownedVouchersIds = user?.vouchers ?? [];
-    // const ownedVouchers = ownedVouchersIds
-    //     .map((vId: string) => vouchers.find(v=> v.id === vId))
-    //     .filter(Boolean);
 
     const ownedVouchers = (user?.vouchers ?? [])
         .map(({ id, vid, expiry, title, picture }: UserVoucher, index: number) => {
@@ -53,7 +50,6 @@ const User: React.FC<Props> = ({id}) => {
                                 renderItem={({ item }) => (
                                     <OwnedVoucherCard
                                         {...item}
-
                                     />
                                 )}
                                 keyExtractor={(item) => item.instanceId}
@@ -63,8 +59,6 @@ const User: React.FC<Props> = ({id}) => {
                             />
                         </>
                     </View>
-
-
             </ScrollView>
         </View>
     )
