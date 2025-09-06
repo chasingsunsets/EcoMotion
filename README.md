@@ -6,24 +6,24 @@ Unlike traditional sustainability apps, EcoMotion promotes sustainable behaviour
 
 This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
 
-Before starting, ensure that you have the following installed:
-- Node.js
-
-On mobile, install the Expo Go application.
-
 ## Get started
 
-1. Install dependencies
+1. On mobile, install the Expo Go application.
+2. Ensure that you have the following installed:
+   - Node.js
+
+
+3. Install dependencies
 
    ```bash
    npm install
    npm install nativewind tailwindcss react-native-reanimated react-native-safe-area-context
    ```
 
-2. Start the app
+5. Start the app
 
    ```bash
    npx expo start
    ```
 
-   Scan the code shown in the bash with the Expo Go application to view in mobile.
+6. Scan the code shown in the bash with the Expo Go application to view in mobile.
