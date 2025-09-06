@@ -17,6 +17,7 @@ On mobile, install the Expo Go application.
 
    ```bash
    npm install
+   npm install nativewind tailwindcss react-native-reanimated react-native-safe-area-context
    ```
 
 2. Start the app
