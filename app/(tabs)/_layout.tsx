@@ -1,7 +1,9 @@
-import { MaterialIcons } from '@expo/vector-icons';
-import { Tabs } from "expo-router";
 import React from 'react';
-import { ImageBackground } from "react-native";
+import { Tabs } from 'expo-router';
+import { MaterialIcons } from '@expo/vector-icons';
+
+const ACTIVE_COLOR = "#72bf6a";
+const INACTIVE_COLOR = "#000"; // black
 
 const _Layout = () => {
     return (
@@ -10,46 +12,73 @@ const _Layout = () => {
                 name="index"
                 options={{
                     title: "Home",
-                    // headerShown: false
                     tabBarIcon: ({ focused }) => (
-                        <>
-                            <ImageBackground>
-                                <MaterialIcons name="home" tintColor="#72bf6a" size={25} />
-                            </ImageBackground>
-                        </>
-                    )
+                        <MaterialIcons
+                            name="home"
+                            size={25}
+                            color={focused ? ACTIVE_COLOR : INACTIVE_COLOR}
+                        />
+                    ),
                 }}
             />
+
+            <Tabs.Screen
+                name="new"
+                options={{
+                    title: "Track",
+                    tabBarIcon: ({ focused }) => (
+                        <MaterialIcons
+                            name="place"
+                            size={25}
+                            color={focused ? ACTIVE_COLOR : INACTIVE_COLOR}
+                        />
+                    ),
+                }}
+            />
+
+            <Tabs.Screen
+                name="community"
+                options={{
+                    title: "Community",
+                    tabBarIcon: ({ focused }) => (
+                        <MaterialIcons
+                            name="groups"  // or "people", "people-outline"
+                            size={25}
+                            color={focused ? "#72bf6a" : "#000"}
+                        />
+                    ),
+                }}
+            />
+
             <Tabs.Screen
                 name="rewards"
                 options={{
                     title: "Rewards",
-                    // headerShown: false
                     tabBarIcon: ({ focused }) => (
-                        <>
-                            <ImageBackground>
-                                <MaterialIcons name="shopping-cart" tintColor="#72bf6a" size={25} />
-                            </ImageBackground>
-                        </>
-                    )
+                        <MaterialIcons
+                            name="shopping-cart"
+                            size={25}
+                            color={focused ? ACTIVE_COLOR : INACTIVE_COLOR}
+                        />
+                    ),
                 }}
             />
+
             <Tabs.Screen
                 name="profile"
                 options={{
                     title: "Profile",
-                    // headerShown: false
                     tabBarIcon: ({ focused }) => (
-                        <>
-                            <ImageBackground>
-                                <MaterialIcons name="supervised-user-circle" tintColor="#72bf6a" size={25} />
-                            </ImageBackground>
-                        </>
-                    )
+                        <MaterialIcons
+                            name="supervised-user-circle"
+                            size={25}
+                            color={focused ? ACTIVE_COLOR : INACTIVE_COLOR}
+                        />
+                    ),
                 }}
             />
         </Tabs>
-    )
-}
-export default _Layout
-// const styles = StyleSheet.create({})
+    );
+};
+
+export default _Layout;
