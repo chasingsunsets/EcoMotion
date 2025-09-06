@@ -27,6 +27,11 @@ import { Link } from "expo-router";
 import React from "react";
 import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { userId } from "@/constants/globals"
+import { users } from "@/data/user"
+import {fetchUserDetails} from "@/services/api";
+import useFetch from "@/services/useFetch";
+import id from "@/app/voucher/[id]";
 
 export default function Index() {
   // mock data – wire up to your store later
@@ -38,6 +43,9 @@ export default function Index() {
     { id: "2", mode: "MRT", km: 8.4, pts: 28, when: "Yesterday · 9:10 AM" },
     { id: "3", mode: "Cycling", km: 3.7, pts: 18, when: "Tue · 7:45 PM" },
   ];
+
+  const user = users.find(u => u.id === userId);
+
 
   return (
     <View className="flex-1 bg-white dark:bg-black">
@@ -74,7 +82,7 @@ export default function Index() {
               <View>
                 <Text className="text-white/80">Your Points</Text>
                 <Text className="text-white text-4xl font-extrabold mt-1">
-                  {points}
+                  {user?.points}
                 </Text>
               </View>
               <Image

@@ -77,7 +77,7 @@ const Voucher = () => {
             <ScrollView contentContainerStyle={{
             paddingBottom: 80 }}>
                 <View>
-                    <Image source={voucher?.picture} className="w-full h-[250px]" resizeMode="stretch"/>
+                    <Image source={voucher?.picture} className="w-full h-[200px]" resizeMode="stretch"/>
                 </View>
 
                 <View className="flex-col items-start justify-center mt-5 px-5">

@@ -35,6 +35,20 @@ const _Layout = () => {
                 }}
             />
             <Tabs.Screen
+                name="community"
+                options={{
+                    title: "Community",
+                    // headerShown: false
+                    tabBarIcon: ({ focused }) => (
+                        <>
+                            <ImageBackground>
+                                <MaterialIcons name="supervised-user-circle" tintColor="#72bf6a" size={25} />
+                            </ImageBackground>
+                        </>
+                    )
+                }}
+            />
+            <Tabs.Screen
                 name="profile"
                 options={{
                     title: "Profile",
@@ -42,7 +56,7 @@ const _Layout = () => {
                     tabBarIcon: ({ focused }) => (
                         <>
                             <ImageBackground>
-                                <MaterialIcons name="supervised-user-circle" tintColor="#72bf6a" size={25} />
+                                <MaterialIcons name="account-circle" tintColor="#72bf6a" size={25} />
                             </ImageBackground>
                         </>
                     )
